@@ -32,6 +32,7 @@
 		D9624B05279E3A83008CCDC9 /* Tag.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tag.cpp; sourceTree = "<group>"; };
 		D9624B06279E3A83008CCDC9 /* Tag.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tag.hpp; sourceTree = "<group>"; };
 		D9624B09279E3B16008CCDC9 /* references.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = references.txt; sourceTree = "<group>"; };
+		D9624B0A279E4AA6008CCDC9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 				D9624B01279E3A0D008CCDC9 /* Test */,
 				D9624B00279E3A05008CCDC9 /* Source */,
 				D9624AFF279E39FC008CCDC9 /* Include */,
+				D9624B0A279E4AA6008CCDC9 /* .gitignore */,
 			);
 			path = ScriptureReferences;
 			sourceTree = "<group>";
