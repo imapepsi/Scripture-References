@@ -30,6 +30,9 @@ public:
     //get list
     std::vector<Scripture> getList();
     
+    //Add to list
+    void addToList(Scripture s);
+    
     //print list
     void printList();
     

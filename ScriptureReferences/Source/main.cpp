@@ -37,10 +37,9 @@ int main(int argc, const char * argv[]) {
                 newTag.setName(name);
             }
             else {
-                
                 Scripture newScripture;
-                
-                newTag
+                newScripture.setBook(line);
+                newTag.addToList(newScripture);
             }
             
             tags.push_back(newTag);

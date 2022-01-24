@@ -30,10 +30,17 @@ void Tag::setName(std::string n) {
     name = n;
 }
 
+//Add to list
+void Tag::addToList(Scripture s) {
+    scripturelist.push_back(s);
+}
+
 //print list
 void Tag::printList() {
     for (int i = 0; i < scripturelist.size(); i++) {
-        std::cout << i+1 << ". " << scripturelist.at(i).printInfo() << std::endl;
+        Scripture scripture = scripturelist.at(i);
+        std::cout << scripturelist.size();
+        std::cout << i+1 << ". " << scripture.printInfo() << std::endl;
     }
 }
 

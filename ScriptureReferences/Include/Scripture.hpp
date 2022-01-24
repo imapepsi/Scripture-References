@@ -29,6 +29,9 @@ public:
     //get book
     std::string getBook();
     
+    //set book
+    void setBook(std::string b);
+    
     //get chapter
     std::string getChapter();
     
