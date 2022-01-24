@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D9624AF9279E39DF008CCDC9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9624AF8279E39DF008CCDC9 /* main.cpp */; };
+		D9624B04279E3A53008CCDC9 /* Scripture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9624B02279E3A53008CCDC9 /* Scripture.cpp */; };
+		D9624B07279E3A83008CCDC9 /* Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9624B05279E3A83008CCDC9 /* Tag.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		D9624AF5279E39DF008CCDC9 /* ScriptureReferences */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ScriptureReferences; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9624AF8279E39DF008CCDC9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D9624B02279E3A53008CCDC9 /* Scripture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scripture.cpp; sourceTree = "<group>"; };
+		D9624B03279E3A53008CCDC9 /* Scripture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scripture.hpp; sourceTree = "<group>"; };
+		D9624B05279E3A83008CCDC9 /* Tag.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tag.cpp; sourceTree = "<group>"; };
+		D9624B06279E3A83008CCDC9 /* Tag.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tag.hpp; sourceTree = "<group>"; };
+		D9624B09279E3B16008CCDC9 /* references.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = references.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +64,46 @@
 		D9624AF7279E39DF008CCDC9 /* ScriptureReferences */ = {
 			isa = PBXGroup;
 			children = (
-				D9624AF8279E39DF008CCDC9 /* main.cpp */,
+				D9624B08279E3AF3008CCDC9 /* Resource */,
+				D9624B01279E3A0D008CCDC9 /* Test */,
+				D9624B00279E3A05008CCDC9 /* Source */,
+				D9624AFF279E39FC008CCDC9 /* Include */,
 			);
 			path = ScriptureReferences;
+			sourceTree = "<group>";
+		};
+		D9624AFF279E39FC008CCDC9 /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				D9624B06279E3A83008CCDC9 /* Tag.hpp */,
+				D9624B03279E3A53008CCDC9 /* Scripture.hpp */,
+			);
+			path = Include;
+			sourceTree = "<group>";
+		};
+		D9624B00279E3A05008CCDC9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D9624AF8279E39DF008CCDC9 /* main.cpp */,
+				D9624B02279E3A53008CCDC9 /* Scripture.cpp */,
+				D9624B05279E3A83008CCDC9 /* Tag.cpp */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D9624B01279E3A0D008CCDC9 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		D9624B08279E3AF3008CCDC9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D9624B09279E3B16008CCDC9 /* references.txt */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9624B07279E3A83008CCDC9 /* Tag.cpp in Sources */,
 				D9624AF9279E39DF008CCDC9 /* main.cpp in Sources */,
+				D9624B04279E3A53008CCDC9 /* Scripture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
