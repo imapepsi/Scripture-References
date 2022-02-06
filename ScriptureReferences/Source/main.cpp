@@ -28,22 +28,28 @@ int main(int argc, const char * argv[]) {
     
     if (myFile.is_open()) {
         while (getline(myFile, line)) {
-            //Create tag is #
-            Tag newTag;
-
+            //Create tag is marked in reference file by a #
+            
             char firstChar = line.front();
             if (firstChar == '#') {
+                Tag newTag;
                 string name = line.substr(1);
                 newTag.setName(name);
+                tags.push_back(newTag);
             }
             else {
                 Scripture newScripture;
-                newScripture.setBook(line);
-                newTag.addToList(newScripture);
+                //Find the book and stop at space save that string in book
+                auto book = line.substr(0, line.find(' '));
+                //Find the chapter and stop at space save that string in chapter -1 to exclude :
+                auto chapter = line.substr(line.find(' ')+1, line.find(':')-line.find(' ')-1);
+                //Find the verses
+                
+                //Set values for scripture
+                newScripture.setBook(book);
+                newScripture.setChapter(chapter);
+                tags.at(tags.size()-1).addToList(newScripture);
             }
-            
-            tags.push_back(newTag);
-
         }
           myFile.close();
     }

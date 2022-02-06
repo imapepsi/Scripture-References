@@ -39,8 +39,7 @@ void Tag::addToList(Scripture s) {
 void Tag::printList() {
     for (int i = 0; i < scripturelist.size(); i++) {
         Scripture scripture = scripturelist.at(i);
-        std::cout << scripturelist.size();
-        std::cout << i+1 << ". " << scripture.printInfo() << std::endl;
+        std::cout << i+1 << ". " << scripture.printInfo() << std::endl; //Print 1. Book 00:00
     }
 }
 

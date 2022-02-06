@@ -35,6 +35,9 @@ public:
     //get chapter
     std::string getChapter();
     
+    //set chapter
+    void setChapter(std::string ch);
+    
     //get verses
     std::vector<std::string> getVerses();
 };

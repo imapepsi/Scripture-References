@@ -17,7 +17,6 @@ Scripture::Scripture(): book("Nephi"), chapter("1") {
 
 std::string Scripture::printInfo() {
     std::string info = book + " " + chapter + ":" + verses.front() + "-" + verses.back();
-    
     return info;
 }
 
@@ -31,6 +30,10 @@ void Scripture::setBook(std::string b) {
 
 std::string Scripture::getChapter() {
     return chapter;
+}
+
+void Scripture::setChapter(std::string ch) {
+    chapter = ch;
 }
 
 std::vector<std::string> Scripture::getVerses() {
