@@ -18,7 +18,7 @@ private:
     //chapter
     std::string chapter;
     //verses vector?
-    std::vector<std::string> verses;
+    std::vector<int> verses;
     
 public:
     Scripture();
@@ -39,7 +39,9 @@ public:
     void setChapter(std::string ch);
     
     //get verses
-    std::vector<std::string> getVerses();
+    std::vector<int> getVerses();
+    
+    void setVerses(std::vector<int> v);
 };
 
 
