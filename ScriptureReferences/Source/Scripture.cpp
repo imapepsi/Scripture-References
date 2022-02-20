@@ -18,7 +18,12 @@ Scripture::Scripture(): book("Nephi"), chapter("1") {
 std::string Scripture::printInfo() {
     std::string info = book + " " + chapter + ":";
     if (verses.size() == 1) {
-        return info = info + std::to_string(verses.front());
+        if (verses.front() == 0) {
+            return info = book + " " + chapter;
+        }
+        else {
+            return info = info + std::to_string(verses.front());
+        }
     }
     else {
         std::vector<int> section = {verses.front()};

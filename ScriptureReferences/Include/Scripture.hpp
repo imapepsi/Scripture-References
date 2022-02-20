@@ -44,6 +44,4 @@ public:
     void setVerses(std::vector<int> v);
 };
 
-
-
 #endif /* ScriptureClass_hpp */

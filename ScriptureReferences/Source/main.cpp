@@ -30,10 +30,9 @@ vector<int> findVerses(string s, char delim) {
     return verses;
 }
 
-int main(int argc, const char * argv[]) {
+vector<Tag> createTags() {
     //Vector of Tags
     vector<Tag> tags;
-    int userPick;
     
     //Read in file of scriptures
     ifstream myFile;
@@ -73,28 +72,81 @@ int main(int argc, const char * argv[]) {
         cout << "Unable to open file" << endl;
     }
     
+    return tags;
+}
+
+void searchTags(vector<Tag> t) {
+    int userPick = 1;
+
+    cout << "We have a collection of scriptures under various tags." << endl << endl;
+    cout << "Tag List" << endl;
+    for (int i = 0; i < t.size(); i++) {
+        Tag tag = t.at(i);
+        cout << i+1 << ") " << tag.getName() << endl;
+    }
+    
+    cout << endl << "Please enter the number of the tag you'd like to see or press (0) to quit: ";
+    cin >> userPick;
+    while (userPick != 0) {
+        while (userPick < 0 || userPick > t.size()) {
+            cout << endl << "Please enter the number of the tag you'd like to see: ";
+            cin >> userPick;
+        }
+        
+        if (userPick == 0) {
+            break;
+        }
+        
+        Tag tag = t.at(userPick-1);
+        cout << endl << tag.getName() << endl;
+        tag.printList();
+        cout << endl;
+        
+        cout << endl << "Please enter the number of the tag you'd like to see or press (0) to quit: ";
+        cin >> userPick;
+    }
+}
+
+
+int main(int argc, const char * argv[]) {
+    vector<string> commands = {"Search Tags", "Create Personal List", "View Personal List"};
+    vector<Tag> tags = createTags();
+    int userCommand = 1;
     
     // Ask user
     cout << "Welcome to the Scripture Reference Library!" << endl;
-    cout << "We have a collection of scriptures under various tags." << endl << endl;
-    cout << "Tag List" << endl;
-    for (int i = 0; i < tags.size(); i++) {
-        Tag tag = tags.at(i);
-        cout << i << ") " << tag.getName() << endl;
+    
+    cout << "Options" << endl;
+    for (int i = 0; i < commands.size(); i++) {
+        cout << i+1 << ") " << commands.at(i) << endl;
     }
-    cout << endl << "Please enter the number of the tag you'd like to see: ";
-    cin >> userPick;
+    cout << endl << "Please enter an option or press (0) to quit: ";
+    cin >> userCommand;
     
-    while (userPick < 0 || userPick > tags.size()) {
-        cout << endl << "Please enter the number of the tag you'd like to see: ";
-        cin >> userPick;
+    while (userCommand != 0) {
+        while (userCommand < 0 || userCommand > commands.size()) {
+            cout << endl << "Please enter an option or press (0) to quit: ";
+            cin >> userCommand;
+        }
+        
+        if (userCommand == 0) {
+            break;
+        }
+        else if (userCommand == 1) {
+            searchTags(tags);
+        }
+        
+        cout << endl << "Options" << endl;
+        for (int i = 0; i < commands.size(); i++) {
+            cout << i+1 << ") " << commands.at(i) << endl;
+        }
+        cout << endl << "Please enter an option or press (0) to quit: ";
+        cin >> userCommand;
     }
     
-    Tag tag = tags.at(userPick);
-    cout << tag.getName() << endl;
-    tag.printList();
     
-    cout << endl;
+    
+    cout << endl << "Thank you for using the Scripture Reference Library!" << endl << endl;
     
     return 0;
 }
