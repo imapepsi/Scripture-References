@@ -85,15 +85,15 @@ void searchTags(vector<Tag> t) {
         cout << i+1 << ") " << tag.getName() << endl;
     }
     
-    cout << endl << "Please enter the number of the tag you'd like to see or press (0) to quit: ";
+    cout << endl << "Please enter the tag number you'd like to see or press (0) to quit: ";
     cin >> userPick;
-    while (userPick != 0) {
-        while (userPick < 0 || userPick > t.size()) {
-            cout << endl << "Please enter the number of the tag you'd like to see: ";
+    while (userPick != 0) { //If not zero continue program
+        while (userPick < 0 || userPick > t.size()) { //Check valid input from user
+            cout << endl << "Please enter the tag number you'd like to see: ";
             cin >> userPick;
         }
         
-        if (userPick == 0) {
+        if (userPick == 0) { // If zero exit
             break;
         }
         
@@ -102,15 +102,25 @@ void searchTags(vector<Tag> t) {
         tag.printList();
         cout << endl;
         
-        cout << endl << "Please enter the number of the tag you'd like to see or press (0) to quit: ";
+        cout << endl << "Please enter the tag number you'd like to see or press (0) to quit: ";
         cin >> userPick;
     }
+}
+
+void addToPersonalList() {
+    cout << "Enter Book: ";
+    cout << "Enter Chapter: ";
+    cout << "Enter verse(s) split by commas ex: 3,5,6,9,10: ";
+    
+    // TODO(): Finish Creating
 }
 
 
 int main(int argc, const char * argv[]) {
     vector<string> commands = {"Search Tags", "Create Personal List", "View Personal List"};
     vector<Tag> tags = createTags();
+    vector<Scripture> personalList;
+
     int userCommand = 1;
     
     // Ask user

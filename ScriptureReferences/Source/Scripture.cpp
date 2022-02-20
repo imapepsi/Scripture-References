@@ -17,12 +17,12 @@ Scripture::Scripture(): book("Nephi"), chapter("1") {
 
 std::string Scripture::printInfo() {
     std::string info = book + " " + chapter + ":";
-    if (verses.size() == 1) {
-        if (verses.front() == 0) {
+    if (verses.size() == 1) { //If only verse
+        if (verses.front() == 0) { //If whole chaper verse = {0}
             return info = book + " " + chapter;
         }
         else {
-            return info = info + std::to_string(verses.front());
+            return info = info + std::to_string(verses.front()); //Print the one vers
         }
     }
     else {
