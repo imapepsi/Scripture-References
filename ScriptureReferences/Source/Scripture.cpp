@@ -10,16 +10,41 @@
 #include <string>
 #include <vector>
 
-Scripture::Scripture(): book("Nephi"), chapter("1") {
+Scripture::Scripture(): book("Nephi"), chapter(1) {
     std::vector<int> v = {};
     verses = v;
 }
 
+std::string Scripture::getBook() {
+    return book;
+}
+
+void Scripture::setBook(std::string b) {
+    book = b;
+}
+
+int Scripture::getChapter() {
+    return chapter;
+}
+
+void Scripture::setChapter(int ch) {
+    chapter = ch;
+}
+
+std::vector<int> Scripture::getVerses() {
+    return verses;
+}
+
+void Scripture::setVerses(std::vector<int> v) {
+    verses = v;
+}
+
 std::string Scripture::printInfo() {
-    std::string info = book + " " + chapter + ":";
+    std::string chapterString = convertIntToString(chapter);
+    std::string info = book + " " + chapterString + ":";
     if (verses.size() == 1) { //If only verse
         if (verses.front() == 0) { //If whole chaper verse = {0}
-            return info = book + " " + chapter;
+            return info = book + " " + convertIntToString(chapter);
         }
         else {
             return info = info + std::to_string(verses.front()); //Print the one vers
@@ -56,26 +81,9 @@ std::string Scripture::printInfo() {
     return info;
 }
 
-std::string Scripture::getBook() {
-    return book;
+
+//Helper Function
+std::string Scripture::convertIntToString(int num) {
+    return std::to_string(num);
 }
 
-void Scripture::setBook(std::string b) {
-    book = b;
-}
-
-std::string Scripture::getChapter() {
-    return chapter;
-}
-
-void Scripture::setChapter(std::string ch) {
-    chapter = ch;
-}
-
-std::vector<int> Scripture::getVerses() {
-    return verses;
-}
-
-void Scripture::setVerses(std::vector<int> v) {
-    verses = v;
-}

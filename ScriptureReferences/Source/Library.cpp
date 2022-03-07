@@ -65,7 +65,7 @@ void Library::searchTags() {
 void Library::addToPersonalList() {
     Scripture scripture = Scripture();
     std::string book;
-    std::string chapter;
+    int chapter;
     std::vector<int> verses;
     int numVerses = 1;
     
@@ -75,6 +75,10 @@ void Library::addToPersonalList() {
     
     std::cout << "Enter Chapter: ";
     std::cin >> chapter;
+    while (chapter <= 0) { //No negative chpaters or chapter 0
+        std::cout << "Enter the chapter: ";
+        std::cin >> chapter;
+    }
     scripture.setChapter(chapter);
     
     std::cout << "Enter Number of Verses: ";
@@ -130,12 +134,13 @@ std::vector<Tag> Library::createTags() {
                 auto book = line.substr(0, line.find(' '));
                 //Find the chapter and stop at space save that string in chapter -1 to exclude :
                 auto chapter = line.substr(line.find(' ')+1, line.find(':')-line.find(' ')-1);
+                int chapterNum = convertStringtoInt(chapter);
                 //Find the verses
                 auto versesString = line.substr(line.find(':')+1, line.find(' ')-line.find(':')-1);
                 std::vector<int> verses = findVerses(versesString, ',');
                 //Set values for scripture
                 newScripture.setBook(book);
-                newScripture.setChapter(chapter);
+                newScripture.setChapter(chapterNum);
                 newScripture.setVerses(verses);
                 tags.at(tags.size()-1).addToList(newScripture);
             }
@@ -149,11 +154,10 @@ std::vector<Tag> Library::createTags() {
     return tags;
 }
 
-/*Helper function convert string to int
+//Helper function convert string to int
 int Library::convertStringtoInt(std::string str) {
     return stoi(str);
 }
- */
 
 //Helper function for createTags
 std::vector<int> Library::findVerses(std::string s, char delim) {

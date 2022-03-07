@@ -15,10 +15,13 @@ class Scripture {
 private:
     //Book
     std::string book;
-    //chapter String type to make output easier
-    std::string chapter;
+    //chapter
+    int chapter;
     //verses vector: int type, to do math if verses are next to eachother for output (1-2, 1,3)
     std::vector<int> verses;
+    
+    //Helper function convert int to string
+    std::string convertIntToString(int num);
     
 public:
     Scripture();
@@ -33,10 +36,10 @@ public:
     void setBook(std::string b);
     
     //get chapter
-    std::string getChapter();
+    int getChapter();
     
     //set chapter
-    void setChapter(std::string ch);
+    void setChapter(int ch);
     
     //get verses
     std::vector<int> getVerses();

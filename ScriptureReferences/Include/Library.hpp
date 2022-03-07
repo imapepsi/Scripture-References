@@ -23,7 +23,8 @@ private:
     std::vector<Scripture> personalList;
     
     std::vector<Tag> createTags();
-    //int convertStringtoInt(std::string str);
+    int convertStringtoInt(std::string str);
+    std::string convertIntToString(int num);
     std::vector<int> findVerses(std::string s, char delim);
     
 public:

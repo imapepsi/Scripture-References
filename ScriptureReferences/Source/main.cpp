@@ -60,6 +60,8 @@ int main(int argc, const char * argv[]) {
         cin >> userCommand;
     }
     
+    cout << endl << "Thank you for using the " << myLibrary.getName() << "!" << endl;
+    
     
     return 0;
 }
