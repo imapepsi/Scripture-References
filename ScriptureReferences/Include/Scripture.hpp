@@ -15,9 +15,9 @@ class Scripture {
 private:
     //Book
     std::string book;
-    //chapter
+    //chapter String type to make output easier
     std::string chapter;
-    //verses vector?
+    //verses vector: int type, to do math if verses are next to eachother for output (1-2, 1,3)
     std::vector<int> verses;
     
 public:

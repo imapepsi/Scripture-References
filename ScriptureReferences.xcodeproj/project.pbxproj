@@ -10,6 +10,7 @@
 		D9624AF9279E39DF008CCDC9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9624AF8279E39DF008CCDC9 /* main.cpp */; };
 		D9624B04279E3A53008CCDC9 /* Scripture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9624B02279E3A53008CCDC9 /* Scripture.cpp */; };
 		D9624B07279E3A83008CCDC9 /* Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9624B05279E3A83008CCDC9 /* Tag.cpp */; };
+		D9B8197827D5842C00D88734 /* Library.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9B8197627D5842C00D88734 /* Library.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,8 @@
 		D9624B06279E3A83008CCDC9 /* Tag.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tag.hpp; sourceTree = "<group>"; };
 		D9624B09279E3B16008CCDC9 /* references.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = references.txt; sourceTree = "<group>"; };
 		D9624B0A279E4AA6008CCDC9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D9B8197627D5842C00D88734 /* Library.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Library.cpp; sourceTree = "<group>"; };
+		D9B8197727D5842C00D88734 /* Library.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Library.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 		D9624AFF279E39FC008CCDC9 /* Include */ = {
 			isa = PBXGroup;
 			children = (
+				D9B8197727D5842C00D88734 /* Library.hpp */,
 				D9624B06279E3A83008CCDC9 /* Tag.hpp */,
 				D9624B03279E3A53008CCDC9 /* Scripture.hpp */,
 			);
@@ -89,6 +93,7 @@
 				D9624AF8279E39DF008CCDC9 /* main.cpp */,
 				D9624B02279E3A53008CCDC9 /* Scripture.cpp */,
 				D9624B05279E3A83008CCDC9 /* Tag.cpp */,
+				D9B8197627D5842C00D88734 /* Library.cpp */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9624B07279E3A83008CCDC9 /* Tag.cpp in Sources */,
+				D9B8197827D5842C00D88734 /* Library.cpp in Sources */,
 				D9624AF9279E39DF008CCDC9 /* main.cpp in Sources */,
 				D9624B04279E3A53008CCDC9 /* Scripture.cpp in Sources */,
 			);
