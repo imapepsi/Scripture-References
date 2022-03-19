@@ -69,8 +69,9 @@ void Library::addToPersonalList() {
     std::vector<int> verses;
     int numVerses = 1;
     
+    std::cin.ignore(); //getline will use the last cin with is usually ""/enter ignore allows to get new input
     std::cout << "Enter Book: ";
-    std::cin >> book;
+    std::getline (std::cin, book);
     scripture.setBook(book);
     
     std::cout << "Enter Chapter: ";
@@ -102,6 +103,8 @@ void Library::addToPersonalList() {
 
 //Option 3: View Personal List
 void Library::printPersonalList() {
+    std::cout << std::endl; //For viewing
+    
     for (int i = 0; i < personalList.size(); i++) {
         std::cout << i+1 << ". " << personalList.at(i).printInfo() << std::endl;
     }
